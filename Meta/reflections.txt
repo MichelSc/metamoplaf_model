@@ -1,0 +1,33 @@
+API or model: what is the difference?
+api: 
+getRootTuples(): Tuples
+getVariables(Tuple):Variables
+getSubTuples(Tuple):Tuples
+createTuple(Tuple):Tuple
+createVariable(Tuple):Variable
+createConstraint(Tuple, Variables)
+
+api GET and api SET
+
+scenario: gives formulation to the system
+1) constructs data conforming with a model
+2) calls a SET api (this is the usual way)
+3) implements a GET api (call back variant)
+1) and 2) are the same, except that with 1) I can use the model as help structure
+How is it different from 3)? Procedural versus declarative
+Which one is the strongest?
+If I have 12, 3 can be automated.
+If I have 3, 1 can be automated.
+Which one is the easiest to implement?
+
+Conclusion:
+  consumer
+    should publish the GET api (callback)
+  producer: 
+    either implement the GET api
+    of construct a model implementing the GET api
+
+scenario receives a formulation from the system
+1) naviguates data conforming with a model
+2) calls a GET api (this is the usual way)
+3) implements a SET api (call back variant)
