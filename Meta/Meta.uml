@@ -189,6 +189,10 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tJRvBPr8EemPefKXru2HRQ" value="*"/>
       </ownedAttribute>
       <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_MzdtAPr2EemPefKXru2HRQ" client="_Sd-OMPr1EemPefKXru2HRQ" supplier="_E5Q2kPr2EemPefKXru2HRQ" contract="_E5Q2kPr2EemPefKXru2HRQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__PDn0PssEemPefKXru2HRQ" name="construct" isStatic="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JSpMoPstEemPefKXru2HRQ" name="facade" type="_E5Q2kPr2EemPefKXru2HRQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DEV3UPstEemPefKXru2HRQ" name="formulation" type="_Sd-OMPr1EemPefKXru2HRQ" direction="return"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_gjCO8Pr2EemPefKXru2HRQ" name="FormulationElement">
       <generalization xmi:type="uml:Generalization" xmi:id="_rDG7cPr2EemPefKXru2HRQ" general="_F-vFYPo8EemOEPu1Va5_1Q"/>
@@ -215,6 +219,13 @@
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
       </ownedAttribute>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_MUNIsPr3EemPefKXru2HRQ" name="VariableType" type="_S08R0Pr3EemPefKXru2HRQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9PESwPs8EemPefKXru2HRQ" name="initialValue">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_DMG48Ps9EemPefKXru2HRQ" name="branchPriority">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_G1xHQPs9EemPefKXru2HRQ" name="branchType"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IDXPkPo8EemOEPu1Va5_1Q" name="Constraint" visibility="public">
       <generalization xmi:type="uml:Generalization" xmi:id="_wDwx4Pr2EemPefKXru2HRQ" general="_nGTusPr2EemPefKXru2HRQ"/>
@@ -229,7 +240,7 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VqJOUPo8EemOEPu1Va5_1Q" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VqJOUfo8EemOEPu1Va5_1Q" key="nature" value="UML_Nature"/>
       </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_VqJOUvo8EemOEPu1Va5_1Q" name="Variables" type="_HKZAMPo8EemOEPu1Va5_1Q" association="_VqInQPo8EemOEPu1Va5_1Q"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VqJOUvo8EemOEPu1Va5_1Q" name="Variables" type="_HKZAMPo8EemOEPu1Va5_1Q" aggregation="composite" association="_VqInQPo8EemOEPu1Va5_1Q"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_VqJ1YPo8EemOEPu1Va5_1Q" name="tuple" type="_F-vFYPo8EemOEPu1Va5_1Q" association="_VqInQPo8EemOEPu1Va5_1Q"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Association" xmi:id="_Y_VBcPo8EemOEPu1Va5_1Q" memberEnd="_Y_Vogvo8EemOEPu1Va5_1Q _Y_WPkPo8EemOEPu1Va5_1Q">
@@ -241,19 +252,6 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cWubEPo8EemOEPu1Va5_1Q" value="*"/>
       </ownedEnd>
       <ownedEnd xmi:type="uml:Property" xmi:id="_Y_WPkPo8EemOEPu1Va5_1Q" name="tuple" type="_F-vFYPo8EemOEPu1Va5_1Q" association="_Y_VBcPo8EemOEPu1Va5_1Q"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_eHdY4Po8EemOEPu1Va5_1Q" memberEnd="_eHd_8fo8EemOEPu1Va5_1Q _eHd_8vo8EemOEPu1Va5_1Q">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eHdY4fo8EemOEPu1Va5_1Q" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eHd_8Po8EemOEPu1Va5_1Q" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_eHd_8fo8EemOEPu1Va5_1Q" name="Constraints" type="_IDXPkPo8EemOEPu1Va5_1Q" association="_eHdY4Po8EemOEPu1Va5_1Q">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hYHRUPo8EemOEPu1Va5_1Q"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hYJGgPo8EemOEPu1Va5_1Q" value="*"/>
-      </ownedEnd>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_eHd_8vo8EemOEPu1Va5_1Q" name="Variables" type="_HKZAMPo8EemOEPu1Va5_1Q" association="_eHdY4Po8EemOEPu1Va5_1Q">
-        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iP508Po8EemOEPu1Va5_1Q"/>
-        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iP-GYPo8EemOEPu1Va5_1Q" value="*"/>
-      </ownedEnd>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_wZ3tkPpuEemOEPu1Va5_1Q" name="LinearTerm">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_xjVQAPpuEemOEPu1Va5_1Q" name="coefficient">
@@ -273,7 +271,7 @@
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8G25IPpuEemOEPu1Va5_1Q" source="org.eclipse.papyrus">
         <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8G25IfpuEemOEPu1Va5_1Q" key="nature" value="UML_Nature"/>
       </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_8G25IvpuEemOEPu1Va5_1Q" name="Terms" type="_wZ3tkPpuEemOEPu1Va5_1Q" association="_8G2SEPpuEemOEPu1Va5_1Q">
+      <ownedEnd xmi:type="uml:Property" xmi:id="_8G25IvpuEemOEPu1Va5_1Q" name="Terms" type="_wZ3tkPpuEemOEPu1Va5_1Q" aggregation="composite" association="_8G2SEPpuEemOEPu1Va5_1Q">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BTnR4PpvEemOEPu1Va5_1Q"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BTpHEPpvEemOEPu1Va5_1Q" value="*"/>
       </ownedEnd>
@@ -302,7 +300,7 @@
       <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_b02zIPr3EemPefKXru2HRQ" name="Equal"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_aPsWsPr4EemPefKXru2HRQ" name="Solution">
-      <ownedAttribute xmi:type="uml:Property" xmi:id="_3nHjsPr4EemPefKXru2HRQ" name="Formulation" type="_Sd-OMPr1EemPefKXru2HRQ" association="_3nFHcPr4EemPefKXru2HRQ">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3nHjsPr4EemPefKXru2HRQ" name="Problem" type="_oDUEgPstEemPefKXru2HRQ" association="_3nFHcPr4EemPefKXru2HRQ">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3nHjsfr4EemPefKXru2HRQ" value="1"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3nIKwPr4EemPefKXru2HRQ" value="1"/>
       </ownedAttribute>
@@ -406,13 +404,39 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_QzE10Pr5EemPefKXru2HRQ" name="Solution" type="_aPsWsPr4EemPefKXru2HRQ" association="_QzDnsPr5EemPefKXru2HRQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_bMcygPr7EemPefKXru2HRQ" name="Problem">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_bMcygPr7EemPefKXru2HRQ" name="ProblemFacade">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_dyXr4Pr7EemPefKXru2HRQ" name="getFormulation">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_s1BywPr7EemPefKXru2HRQ" name="formulation" type="_E5Q2kPr2EemPefKXru2HRQ" direction="return"/>
       </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_uer4MPr7EemPefKXru2HRQ" name="getGoals"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uer4MPr7EemPefKXru2HRQ" name="getGoals">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IpWikPsuEemPefKXru2HRQ" name="goals" type="_THOPoPsuEemPefKXru2HRQ" direction="return">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MDPPgPsuEemPefKXru2HRQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MDXyYPsuEemPefKXru2HRQ" value="*"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_w1rAEPsvEemPefKXru2HRQ" name="isGoalLinear">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ze3P4PsvEemPefKXru2HRQ" name="goal" type="_k9ZSsPr8EemPefKXru2HRQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2R7NYPsvEemPefKXru2HRQ" name="islinear" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nFDHoPs8EemPefKXru2HRQ" name="isGoalLinearConstraint">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nFDHofs8EemPefKXru2HRQ" name="goal" type="_k9ZSsPr8EemPefKXru2HRQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nFDHovs8EemPefKXru2HRQ" name="islinear" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_p6wwgPs8EemPefKXru2HRQ" name="sGoalLinearOptimize">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6wwgfs8EemPefKXru2HRQ" name="goal" type="_k9ZSsPr8EemPefKXru2HRQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_p6wwgvs8EemPefKXru2HRQ" name="islinear" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uIZ1oPs8EemPefKXru2HRQ" name="getLinearGoalLowerBound">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_zGPBkPs8EemPefKXru2HRQ" name="goal" type="_JaSa0PsvEemPefKXru2HRQ"/>
+      </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_2vM84Pr7EemPefKXru2HRQ" name="Solver">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_2vM84Pr7EemPefKXru2HRQ" name="SolverFacade">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_QQp94Pr8EemPefKXru2HRQ" name="setProblem">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_UPVZ8Pr8EemPefKXru2HRQ" name="problem" type="_bMcygPr7EemPefKXru2HRQ"/>
       </ownedOperation>
@@ -434,7 +458,9 @@
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="__sbWkPr7EemPefKXru2HRQ" name="Solution" type="_aPsWsPr4EemPefKXru2HRQ" association="__sZhYPr7EemPefKXru2HRQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_k9ZSsPr8EemPefKXru2HRQ" name="Goal"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_k9ZSsPr8EemPefKXru2HRQ" name="Goal">
+      <generalization xmi:type="uml:Generalization" xmi:id="_bMy6gPssEemPefKXru2HRQ" general="_gjCO8Pr2EemPefKXru2HRQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_l5AmYPr8EemPefKXru2HRQ" name="LinearGoal">
       <generalization xmi:type="uml:Generalization" xmi:id="_rmlNMPr8EemPefKXru2HRQ" general="_k9ZSsPr8EemPefKXru2HRQ"/>
       <generalization xmi:type="uml:Generalization" xmi:id="_9xI5IPr8EemPefKXru2HRQ" general="_zQQUUPr8EemPefKXru2HRQ"/>
@@ -446,6 +472,212 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_tJRvBfr8EemPefKXru2HRQ" name="Formulation" type="_Sd-OMPr1EemPefKXru2HRQ" association="_tJRH8Pr8EemPefKXru2HRQ"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_zQQUUPr8EemPefKXru2HRQ" name="Linear"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_oDUEgPstEemPefKXru2HRQ" name="Problem">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_d9WrsvsuEemPefKXru2HRQ" name="Formulation" type="_E5Q2kPr2EemPefKXru2HRQ" association="_d9VdkPsuEemPefKXru2HRQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d9Wrs_suEemPefKXru2HRQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d9WrtPsuEemPefKXru2HRQ" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_28N9AfsuEemPefKXru2HRQ" name="Goals" type="_THOPoPsuEemPefKXru2HRQ" aggregation="composite" association="_28Mu4PsuEemPefKXru2HRQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_28OkEPsuEemPefKXru2HRQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_28OkEfsuEemPefKXru2HRQ" value="1"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_yppKAPstEemPefKXru2HRQ" client="_oDUEgPstEemPefKXru2HRQ" supplier="_bMcygPr7EemPefKXru2HRQ" contract="_bMcygPr7EemPefKXru2HRQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YMwdsPs8EemPefKXru2HRQ" name="construct" isStatic="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YMwdsfs8EemPefKXru2HRQ" name="facade" type="_bMcygPr7EemPefKXru2HRQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YMwdsvs8EemPefKXru2HRQ" name="problem" type="_oDUEgPstEemPefKXru2HRQ" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_THOPoPsuEemPefKXru2HRQ" name="ProblemGoal">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rTxTMPsuEemPefKXru2HRQ" name="Goal" type="_k9ZSsPr8EemPefKXru2HRQ" association="_rTwFEPsuEemPefKXru2HRQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rTxTMfsuEemPefKXru2HRQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rTxTMvsuEemPefKXru2HRQ" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_d9VdkPsuEemPefKXru2HRQ" memberEnd="_d9WrsvsuEemPefKXru2HRQ _d9WrtfsuEemPefKXru2HRQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_d9WrsPsuEemPefKXru2HRQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_d9WrsfsuEemPefKXru2HRQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_d9WrtfsuEemPefKXru2HRQ" name="Problems" type="_oDUEgPstEemPefKXru2HRQ" association="_d9VdkPsuEemPefKXru2HRQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nzS2EPsuEemPefKXru2HRQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nzXukPsuEemPefKXru2HRQ" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_rTwFEPsuEemPefKXru2HRQ" memberEnd="_rTxTMPsuEemPefKXru2HRQ _rTxTM_suEemPefKXru2HRQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rTwsIPsuEemPefKXru2HRQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rTwsIfsuEemPefKXru2HRQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_rTxTM_suEemPefKXru2HRQ" name="Problems" type="_THOPoPsuEemPefKXru2HRQ" association="_rTwFEPsuEemPefKXru2HRQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wLWGIPsuEemPefKXru2HRQ"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wLYiYPsuEemPefKXru2HRQ" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_28Mu4PsuEemPefKXru2HRQ" memberEnd="_28N9AfsuEemPefKXru2HRQ _28OkEvsuEemPefKXru2HRQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_28NV8PsuEemPefKXru2HRQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_28N9APsuEemPefKXru2HRQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_28OkEvsuEemPefKXru2HRQ" name="Problem" type="_oDUEgPstEemPefKXru2HRQ" association="_28Mu4PsuEemPefKXru2HRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_CNe14PsvEemPefKXru2HRQ" name="ProblemLinearGoal">
+      <generalization xmi:type="uml:Generalization" xmi:id="_hEC6YPsvEemPefKXru2HRQ" general="_THOPoPsuEemPefKXru2HRQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Htb3cPsvEemPefKXru2HRQ" name="ProblemLinearGoalOptimize">
+      <generalization xmi:type="uml:Generalization" xmi:id="_fjr64PsvEemPefKXru2HRQ" general="_CNe14PsvEemPefKXru2HRQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_W7t_gPsvEemPefKXru2HRQ" name="Type" type="_S8r-IPsvEemPefKXru2HRQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bWuyQPsvEemPefKXru2HRQ" name="Weight">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_JaSa0PsvEemPefKXru2HRQ" name="ProblemLinearGoalConstraint">
+      <generalization xmi:type="uml:Generalization" xmi:id="_gfJdkPsvEemPefKXru2HRQ" general="_CNe14PsvEemPefKXru2HRQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OwcAIPsvEemPefKXru2HRQ" name="LowerBound">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_OwdOQPsvEemPefKXru2HRQ" name="UpperBound">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_S8r-IPsvEemPefKXru2HRQ" name="OptimizationTye">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_U0i3oPsvEemPefKXru2HRQ" name="Minimize"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Vvom4PsvEemPefKXru2HRQ" name="Maximize"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EH4OEPyEEem6rt6PF5cxww" name="Concrete1">
+      <packagedElement xmi:type="uml:Class" xmi:id="_IpGWgPyEEem6rt6PF5cxww" name="JettyFormulation">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hukmIPyEEem6rt6PF5cxww" name="Jetties" type="_SgkK4PyEEem6rt6PF5cxww" aggregation="composite" association="_huiw8PyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hukmIfyEEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hukmIvyEEem6rt6PF5cxww" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0vRP4PyEEem6rt6PF5cxww" name="varPlanned" type="_HKZAMPo8EemOEPu1Va5_1Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_KCgZcPyEEem6rt6PF5cxww" name="Jetty">
+        <generalization xmi:type="uml:Generalization" xmi:id="_rFA0QPyIEem6rt6PF5cxww" general="_ocVh0PyIEem6rt6PF5cxww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_LU3ZMPyEEem6rt6PF5cxww" name="Bucket">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ruTo4PyIEem6rt6PF5cxww" general="_ocVh0PyIEem6rt6PF5cxww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_SgkK4PyEEem6rt6PF5cxww" name="TupleJetty">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_V3viEPyEEem6rt6PF5cxww" name="Jetty" type="_KCgZcPyEEem6rt6PF5cxww" association="_V3r3sPyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V3wJIPyEEem6rt6PF5cxww" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V3wJIfyEEem6rt6PF5cxww" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lDCAgvyEEem6rt6PF5cxww" name="Buckets" type="_Tq86YPyEEem6rt6PF5cxww" aggregation="composite" association="_lDBZcPyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lDCnkPyEEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lDCnkfyEEem6rt6PF5cxww" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qQAbsPyEEem6rt6PF5cxww" name="varSelected" type="_HKZAMPo8EemOEPu1Va5_1Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Tq86YPyEEem6rt6PF5cxww" name="TupleJettyBucket">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bVI-4PyEEem6rt6PF5cxww" name="Bucket" type="_LU3ZMPyEEem6rt6PF5cxww" association="_bVHwwPyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bVI-4fyEEem6rt6PF5cxww" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bVI-4vyEEem6rt6PF5cxww" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_v5RxUPyEEem6rt6PF5cxww" name="varStart" type="_HKZAMPo8EemOEPu1Va5_1Q"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yE4GMPyEEem6rt6PF5cxww" name="varEnd" type="_HKZAMPo8EemOEPu1Va5_1Q"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_V3r3sPyEEem6rt6PF5cxww" memberEnd="_V3viEPyEEem6rt6PF5cxww _V3wJIvyEEem6rt6PF5cxww">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_V3uT8PyEEem6rt6PF5cxww" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_V3uT8fyEEem6rt6PF5cxww" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_V3wJIvyEEem6rt6PF5cxww" name="TupleJetty" type="_SgkK4PyEEem6rt6PF5cxww" association="_V3r3sPyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Yk9WQPyEEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Yk_ygPyEEem6rt6PF5cxww" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_bVHwwPyEEem6rt6PF5cxww" memberEnd="_bVI-4PyEEem6rt6PF5cxww _bVI-4_yEEem6rt6PF5cxww">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bVIX0PyEEem6rt6PF5cxww" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bVIX0fyEEem6rt6PF5cxww" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_bVI-4_yEEem6rt6PF5cxww" name="TupleJettyBucket" type="_Tq86YPyEEem6rt6PF5cxww" association="_bVHwwPyEEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dgsQcPyEEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dgtekPyEEem6rt6PF5cxww" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_huiw8PyEEem6rt6PF5cxww" memberEnd="_hukmIPyEEem6rt6PF5cxww _hukmI_yEEem6rt6PF5cxww">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_huj_EPyEEem6rt6PF5cxww" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_huj_EfyEEem6rt6PF5cxww" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_hukmI_yEEem6rt6PF5cxww" name="Formulation" type="_IpGWgPyEEem6rt6PF5cxww" association="_huiw8PyEEem6rt6PF5cxww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lDBZcPyEEem6rt6PF5cxww" memberEnd="_lDCAgvyEEem6rt6PF5cxww _lDCnkvyEEem6rt6PF5cxww">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lDCAgPyEEem6rt6PF5cxww" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lDCAgfyEEem6rt6PF5cxww" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lDCnkvyEEem6rt6PF5cxww" name="Jetty" type="_SgkK4PyEEem6rt6PF5cxww" association="_lDBZcPyEEem6rt6PF5cxww"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="__3Gf8PyEEem6rt6PF5cxww" name="JettyFormulationImp">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_nqofcPyFEem6rt6PF5cxww" name="getRootTuplesDefault">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_vEHOcPyFEem6rt6PF5cxww" name="tuples" type="_4Tp_0PyIEem6rt6PF5cxww" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_xa-YIPyFEem6rt6PF5cxww" name="getSubTuplesDefault">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_xa-YIfyFEem6rt6PF5cxww" name="tuples" type="_4Tp_0PyIEem6rt6PF5cxww" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_2BgeYPyFEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_9pLaYPyFEem6rt6PF5cxww" name="getVarTypePlanned">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_EO0RoPyGEem6rt6PF5cxww" name="var" type="_S08R0Pr3EemPefKXru2HRQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_PDFFcPyGEem6rt6PF5cxww" name="getVarTypeSelected">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_PDFFcfyGEem6rt6PF5cxww" name="type" type="_S08R0Pr3EemPefKXru2HRQ" direction="return"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_Sh1EQPyGEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_VoYlgPyGEem6rt6PF5cxww" name="getVarTypeStart">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_VoYlgvyGEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_YcVT0PyGEem6rt6PF5cxww" name="bucket" type="_LU3ZMPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_VoYlgfyGEem6rt6PF5cxww" name="type" type="_S08R0Pr3EemPefKXru2HRQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ebUawPyGEem6rt6PF5cxww" name="getVarTypeEnd">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ebUawfyGEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ebUawvyGEem6rt6PF5cxww" name="bucket" type="_LU3ZMPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_ebUaw_yGEem6rt6PF5cxww" name="type" type="_S08R0Pr3EemPefKXru2HRQ" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_JC8SgPyHEem6rt6PF5cxww" name="getVariables">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_JC8SgfyHEem6rt6PF5cxww" name="vars" type="_4FYd0PyJEem6rt6PF5cxww" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LDWEAPyHEem6rt6PF5cxww"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LDbjkPyHEem6rt6PF5cxww" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_NCLvQPyHEem6rt6PF5cxww" name="getVariables">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_UMvRcPyHEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_NCLvQfyHEem6rt6PF5cxww" name="vars" type="_4FYd0PyJEem6rt6PF5cxww" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kB_58PyHEem6rt6PF5cxww"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kCELYPyHEem6rt6PF5cxww" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XNpdsPyHEem6rt6PF5cxww" name="CopyOf_getVarPlanned_8">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_XNpdsfyHEem6rt6PF5cxww" name="var" type="_HKZAMPo8EemOEPu1Va5_1Q" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_bxW5cPyHEem6rt6PF5cxww" name="getVariables">
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bxW5cfyHEem6rt6PF5cxww" name="jetty" type="_KCgZcPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_dwvXQPyHEem6rt6PF5cxww" name="bucket" type="_LU3ZMPyEEem6rt6PF5cxww"/>
+          <ownedParameter xmi:type="uml:Parameter" xmi:id="_bxW5cvyHEem6rt6PF5cxww" name="vars" type="_4FYd0PyJEem6rt6PF5cxww" direction="return">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gSneIPyHEem6rt6PF5cxww"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gSs9sPyHEem6rt6PF5cxww" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ocVh0PyIEem6rt6PF5cxww" name="Object"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_1oZTcPyIEem6rt6PF5cxww" name="Foundation">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4Tp_0PyIEem6rt6PF5cxww" name="TupleRef">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8mz3EPyIEem6rt6PF5cxww" name="Literal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_BGHT8PyJEem6rt6PF5cxww" name="Refs" type="_ocVh0PyIEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_E5p3APyJEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E5wksPyJEem6rt6PF5cxww" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_I25vsPyJEem6rt6PF5cxww" name="VarRef">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_I25vsfyJEem6rt6PF5cxww" name="Literal" type="_4FYd0PyJEem6rt6PF5cxww"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_I25vsvyJEem6rt6PF5cxww" name="Refs" type="_ocVh0PyIEem6rt6PF5cxww">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_I25vs_yJEem6rt6PF5cxww"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I25vtPyJEem6rt6PF5cxww" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_4FYd0PyJEem6rt6PF5cxww" name="VarName">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_4FYd0fyJEem6rt6PF5cxww" name="Literal">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_yBNxkPo8EemOEPu1Va5_1Q" name="GanttChart">
     <packagedElement xmi:type="uml:Class" xmi:id="_4Kxw0Po8EemOEPu1Va5_1Q" name="Timeline">
